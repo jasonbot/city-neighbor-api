@@ -197,4 +197,4 @@ class Application(object):
 if __name__ == "__main__":
     bottle_app = Application(GeoDatabase())  # pylint: disable=C0103
 
-    run(host='localhost', port=8080, reload=True)
+    run(host='localhost', port=8080)

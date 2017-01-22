@@ -6,7 +6,7 @@ This is the coding challenge for Primer.
 Because of time constraints, I chose to use bottle as the HTTP framework
 and avoid any other third-party libraries.
 
-To run, simply execute `python app.py` from the command line.
+To run, simply clone this repo and execute `python app.py` from the command line.
 
 Endpoints
 ---------
