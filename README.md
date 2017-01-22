@@ -24,10 +24,19 @@ The `neighbors` endpoint accepts two optional `GET` parameters:
 
 Things I Would Have Done With More Time
 ---------------------------------------
+* Finish the spelling suggestion endpoint. I was going to use
+  [`get_close_matches`](https://docs.python.org/2.7/library/difflib.html?highlight=difflib#difflib.get_close_matches)
+  to avoid a third party lib but I'd prefer to use some edit distance function
+  in the database or maybe use NLTK.
 * Look into a smarter datastore, likely starting with an ORM.
 * Look into spatial indexing (though the dataset is pretty small). I'd likely
   go with an R-Tree _or_ put the data into PostGIS and set up a spatial index
   on the data there.
 * If this app needs more flexibility, a more extensible framework would make
   sense. Bottle gives routing and JSON more or less for free which makes it
-  easy to get up and running
+  easy to get up and running but even something nicer like Flask would make it
+  more maintainable long term.
+* Test suite. I incrementally built this app up using superfluous prints, to
+  make it "trustable" I'd build up at least one small unit test suite.
+* Build/tooling scripts to spin up a virtualenv based on a `requirements.txt`,
+  scripts that get called from git hooks to auto-lint the codebase.
